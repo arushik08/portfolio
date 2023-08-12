@@ -1,0 +1,358 @@
+* {
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   @media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+}
+
+body{
+    background: #2C3333;
+    color:#CBE4DE;
+
+}
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #CBE4DE;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #2C3333;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a{
+    font-size: 18px;
+    color:#CBE4DE;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;  
+    transition:.3s; 
+}
+
+.navbar a:hover
+{
+    color:#0E8388;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding:0 10%;
+    background: url(/images/arushi.png) no-repeat;
+    background-size:contain; 
+    background-position: right;
+}
+
+.homeContent{
+    max-width: 600px;
+}
+
+.homeContent h1{
+    position: relative;
+    font-size:55px ;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.homeContent h1::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #2C3333;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.homeContent h3{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    color:#0E8388;
+}
+
+.homeContent h3::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #2C3333;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.homeContent p{
+    position: relative;
+    font-size: 15px;
+    margin: 20px 0 40px;
+}
+
+.homeContent p::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #2C3333;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.homeContent .button{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.homeContent .button::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #2C3333;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.button a{
+    position: relative;
+    width: 150px;
+    height:100%;
+    background:#0E8388;
+    border:2px solid #0E8388;
+    border-radius: 8px;
+    display: inline-flex;
+    font-size:20px ;
+    color:#2C3333;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.button a:hover{
+    color: #0E8388;
+}
+
+
+.button a:nth-child(2){
+    background: transparent;
+    color:#0E8388;  
+}
+
+.button a:nth-child(2):hover{
+    background: #2C3333;
+}
+
+.button a:nth-child(2)::before{
+    background: #0E8388;
+}
+
+button a::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height:100%;
+    background:#2C3333;
+    z-index: -1;
+    transition: .5s;
+}
+
+button a:hover::before{
+    width:100%;
+}
+
+.homeSci{
+    position: absolute;
+    bottom:40px;
+    width: 170px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.homeSci::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:100%;
+    height:100%;
+    background: #2C3333;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.3s;
+    z-index:2
+}
+
+.homeSci a{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display:inline-flex;
+    width:40px;
+    height:40px;
+    background: transparent;
+    border: 2px solid #0E8388;
+    font-size: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    color:#0E8388
+}
+
+.homeSci a:hover{
+    color: #012128d3;
+}
+
+.homeSci a::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:100%;
+    background: #0E8388;
+    z-index: -1;
+    transition: .5s;
+}
+
+.homeSci a:hover::before{
+    width: 100%;
+
+}
+
+.homeImg{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 600px;
+    height:100%;
+    background: transparent;
+    transition: 3s;
+}
+
+.homeImg::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    right:0;
+    width:120%;
+    height:100%;
+    background:#2C3333;
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 3;
+}
+
+.homeImg:hover{
+    background: #2C3333;
+    opacity: 0.8;
+}
+
+
+table{
+    border-spacing: 0.00000001px;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    font-style: italic;
+}
+
+ul{
+    list-style-type: disc;
+    margin-left: 10px;
+}
+
+p{
+    margin-left: 10px;
+}
+
+.contact{
+    border: 2px solid #0E8388;
+    text-align: center; 
+    margin: 100px; 
+    border-radius: 40%;
+    border-left-width: 30px;
+    border-right-width: 30px;
+    padding: 30px;
+}
+
+.leetcode{
+    width:40px;
+    height:40px;
+}
+.github{
+    width:40px;
+    height:40px;
+}
+
+.leetCode, .gitHub{
+    color: #CBE4DE;
+}
+
+.leetCode a:hover{
+    color:#0E8388;
+}
+
+.gitHub a:hover{
+    color:#0E8388;
+}
+
+/*KEYFRAMES ANIMATION*/
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+    
